@@ -1,18 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/kelly_slab"
+            android:text="WEB SAFETY"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/title"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Scan links for Abusive Experience and possible threats"
+            android:textColor="@color/colorLight" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/linkField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/paste_link_here"
+            android:layout_below="@id/tvDescription"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:endIconMode="clear_text"
+            app:boxBackgroundColor="@color/colorAccent"
+            app:shapeAppearance="?attr/shapeAppearanceSmallComponent"
+            app:startIconTint="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@drawable/ic_baseline_insert_link_24"
+            app:startIconContentDescription="@string/paste_link_here">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_link_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/testButton"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linkField"
+            app:icon="@drawable/ic_baseline_youtube_searched_for_24"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_centerHorizontal="true"
+            android:text="SCAN LINK"
+            app:backgroundTint="@color/colorPrimaryDark" />
+
+        <FrameLayout
+            android:id="@+id/main_activity_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+
+            android:layout_below="@id/testButton" />
+
+
+    </RelativeLayout>
+</ScrollView>

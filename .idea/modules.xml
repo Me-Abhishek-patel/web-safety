@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/G-Web_Safety.iml" filepath="$PROJECT_DIR$/.idea/modules/G-Web_Safety.iml" group="G-Web_Safety" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="G-Web Safety/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/G-Web_Safety.iml" filepath="$PROJECT_DIR$/.idea/modules/G-Web_Safety.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/G-Web_Safety.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/G-Web_Safety.app.iml" />
     </modules>
   </component>
 </project>
